@@ -5,7 +5,7 @@ def CATEGORIES():
    addDir3('Movies','https://e682ab385d0e9eba146f8407acc0383644a1d276.googledrive.com/host/0B88fGGARV1mmcjdJaG1rX1N2NXM/movies.txt',4,'https://www.offerpop.com/wp-content/uploads/2014/08/Movies.jpg','','')
 
 def channel():
-   r = requests.get('https://e682ab385d0e9eba146f8407acc0383644a1d276.googledrive.com/host/0B88fGGARV1mmcjdJaG1rX1N2NXM/channels.txt')
+   r = requests.get('https://dl.dropboxusercontent.com/scl/fi/xepdqd63mrc4r0eu1ezmn/changelog.txt?rlkey=3gn5e3aivsgnag03gexvzaduv&dl=0')
    match = re.compile('name= (.+?) url= "(.+?)" logo= "(.+?)"').findall(r.content)
    for name,link, logo in match:
      addLink(name,link,logo,'','')
